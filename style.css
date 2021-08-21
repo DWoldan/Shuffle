@@ -1,0 +1,224 @@
+html {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('bgcSVG.svg');
+    }
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+.main {
+    max-width: 1440px;
+    height: 100vh;
+    display: grid;
+    grid-area: 'left right';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* ################################## */
+/* ########### Left Side ########### */
+/* ################################## */
+
+.boxLeft {
+    height: 100%;
+    width: 100%;    
+    position: relative;
+}
+.left {
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.left h7 {
+    display: block;
+    padding-bottom: 15px;
+    font-size: 14px;
+    color: #6371c2;
+    text-transform: uppercase;
+}
+.left h2 {
+    padding-bottom: 15px;
+    font-size: 4rem;
+    font-weight: 400;
+    color: rgb(26,35,126);
+}
+.left h2 span {
+    padding-bottom: 15px;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #314efe;
+}
+.left p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #6371c2;
+}
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    background-color: #FFAC00;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+button a {
+    color: white;
+    text-decoration: none;
+}
+button:hover {
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px #FFAC00;
+}
+button:hover a{
+    color: #FFAC00;
+}
+
+/* ################################## */
+/* ########### Right Side ########### */
+/* ################################## */
+
+.boxRight {
+    width: 100%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.right {
+    display: flex;
+    flex-direction: row;
+}
+.mainRight {
+    margin-top: 30px;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.box img {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+}
+.box h4 {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgb(26,35,126);
+}
+.box p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #959fd6;
+}
+
+
+
+@media(max-width: 1093px) {
+    /* Left */
+    .left h7 {
+        font-size: 13px;
+    }
+    .left h2, .left h2 span {
+        font-size: 3rem;
+    }
+    .left p {
+        font-size: 14px;
+    }
+    /* Right */
+    .box h4 {
+        font-size: 16px;
+    }
+    .box p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+@media(max-width: 977px) {
+   .main {
+       grid-template-columns: 1fr;
+       grid-template-rows: repeat(2, 1fr);
+       grid-template-areas: 'left' 'right';
+   }
+   .left {
+       padding: 0px;
+       left: 50%;
+       transform: translate(-50%, -50%);
+   }
+   button {
+       display: block;
+   }
+   .boxRight {
+       width: 70%;
+       padding-right: 20px;
+       padding-left: 20px;
+   }
+   .box h4{
+    line-height: 24px;
+}
+}
+@media(max-width: 757px) {
+    .main {
+        grid-template-rows: 35% 65%;
+    }
+    /* Left */
+    .left h7 {
+        font-size: 12px;
+    }
+    .left h2, .left h2 span {
+        font-size: 2rem;
+    }
+    .left p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    button {
+        margin-top: 30px;
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    /* Right */
+    .boxRight {
+        width: 85%;
+    }
+    .box h4{
+        line-height: 18px;
+    }
+    .box h4 {
+        font-size: 12px;
+    }
+    .box p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+@media(max-width: 500px) {
+    .main {
+        grid-template-rows: 45%;
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainRight, .boxThree{
+        margin-top: 0;
+    }
+}
